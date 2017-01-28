@@ -1,0 +1,7 @@
+drupal_ng.view:
+  path: '/drupal_ng'
+  defaults:
+    _title: 'Drupal AngularJS'
+    _controller: '\Drupal\drupal_ng\Controller\DrupalNgController::viewDrupalNg'
+  requirements:
+    _permission: 'access content'

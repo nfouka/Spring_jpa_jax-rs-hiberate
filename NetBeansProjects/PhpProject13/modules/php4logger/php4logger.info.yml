@@ -1,0 +1,5 @@
+name: php4logger
+type: module
+description: php4logger for d8 developer by nadir.fouka@gmail.com
+core: 8.x
+package: Planet@Dev

@@ -1,0 +1,12 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function drupal_ng_theme() {
+  return array(
+    'drupal_ng_view' => array(
+      'template' => 'view',
+      'variables' => array('title' => NULL),
+    ),
+  );
+}

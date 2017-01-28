@@ -1,0 +1,5 @@
+name: Drupal 8 MultiStep
+description: 'MultiStep processing'
+type: module
+core: 8.x
+package: Planet@Dev

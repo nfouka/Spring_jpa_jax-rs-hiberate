@@ -1,0 +1,8 @@
+
+php4logger.default_controller_hello:
+  path: '/php4logger'
+  defaults:
+    _controller: '\Drupal\php4logger\Controller\LoggerController::hello'
+    _title: 'logger'
+  requirements:
+    _permission: 'access content'
