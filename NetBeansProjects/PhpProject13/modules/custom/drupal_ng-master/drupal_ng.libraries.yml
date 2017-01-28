@@ -3,7 +3,7 @@ angularjs:
   css:
     css/style.css: {}
   js:
-    'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js':  {type: external}
+    'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js':  {type: external}
     'http://d3js.org/d3.v3.min.js':  {type: external}
     'https://d3js.org/d3-scale-chromatic.v1.min.js':  {type: external}
     'https://d3js.org/topojson.v2.min.js':  {type: external}

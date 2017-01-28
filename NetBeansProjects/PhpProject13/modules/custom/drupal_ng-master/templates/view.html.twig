@@ -1,151 +1,19 @@
-
-
-<div id="myProgress">
-  <div id="myBar" class="progress__bar"></div>
-</div>
-
-<br>
-<button onclick="move()">Click Me</button> 
-
-
-<div id="accordion">
-  <h3>Section 1</h3>
-  <div>
-    <p>
-    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-    </p>
+<div ng-app="myApp2" ng-controller="customersCtrl2" id="s3_container2">
+    <pre>Sorting predicate = {%verbatim%}{{predicate}}{%endverbatim%}; reverse = {%verbatim%}{{reverse}}{%endverbatim%}</pre>
+    <hr/>
+    [ <a href="" ng-click="predicate=''">unsorted</a> ]
+    <table class="friend">
+      <tr>
+        <th><a href="" ng-click="predicate = 'name'; reverse=!reverse">name</a></th>
+        <th><a href="" ng-click="predicate = 'Code_commune_INSEE'; reverse=!reverse">Code_commune_INSEE</a></th>
+        <th><a href="" ng-click="predicate = 'Code_postal'; reverse=!reverse">Code_postal</a></th>
+        <th><a href="" ng-click="predicate = 'Libelle_acheminement'; reverse=!reverse">Libelle_acheminement</a></th>
+      <tr>
+      <tr ng-repeat="x in myData | orderBy:predicate:reverse">
+        <td>{%verbatim%}{{x.name}}{%endverbatim%}</td>
+        <td>{%verbatim%}{{x.Code_commune_INSEE}}{%endverbatim%}</td>
+          <td>{%verbatim%}{{x.Code_postal}}{%endverbatim%}</td>
+        <td>{%verbatim%}{{x.Libelle_acheminement}}{%endverbatim%}</td>
+      <tr>
+    </table>
   </div>
-  <h3>Section 2</h3>
-  <div>
-    <p>
-    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-    suscipit faucibus urna.
-    </p>
-  </div>
-  <h3>Section 3</h3>
-  <div>
-    <p>
-    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-    </p>
-    <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
-    </ul>
-  </div>
-  <h3>Section 4</h3>
-  <div>
-    <p>
-    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-    mauris vel est.
-    </p>
-    <p>
-    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos.
-    </p>
-  </div>
-</div>
- 
-<div class="example">
-     Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos. 
-    ﻿I can barely remember the first time I added JavaScript to a Drupal page using a custom module. I'm sure looked at the documentation, took the example snippet, tweaked it, tested it, and moved on to something else. It was only later, using a debugger, that I saw how Drupal's "behavior" system worked and realized that my code was not being executed as I expected.
-
-In this article, we'll cover the key facts about Drupal behaviors, then look at a real Drupal project to inspect its behaviors and optimize them.
-</div>
-
-
-
-
-<form class="form-horizontal" role="form">
-     <h3>Sign Up!</h3>
-
-    <div class="form-group">
-        <label for="username" class="col-lg-2 control-label">Username</label>
-        <div class="col-lg-10">
-            <input type="text" class="form-control" id="username" name="username" />
-            <span class="help-block hidden"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="email" class="col-lg-2 control-label">Email</label>
-        <div class="col-lg-10">
-            <input type="email" class="form-control" id="email" name="email" />
-            <span class="help-block hidden"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="password" class="col-lg-2 control-label">Password</label>
-        <div class="col-lg-10">
-            <input type="password" class="form-control" id="password" name="password" />
-            <span class="help-block hidden"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="repeatPassword" class="col-lg-2 control-label">Repeat Password</label>
-        <div class="col-lg-10">
-            <input type="password" class="form-control" id="repeatPassword" name="repeatPassword" />
-            <span class="help-block hidden"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="country" class="col-lg-2 control-label">Country</label>
-        <div class="col-lg-10">
-            <select class="form-control" id="country" name="country">
-              <option>Norway</option>
-              <option>Sweeden</option>
-              <option>Denmark</option>
-              <option>Finland</option>
-              <option>Iceland</option>
-            </select>
-            <span class="help-block hidden"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-lg-2 control-label">Gender</label>
-        <div class="col-lg-offset-2 col-lg-10">
-            <label class="radio-inline control-label">
-                <input type="radio" id="genderMale" name="gender" value="male" /> Male
-            </label>
-            <label class="radio-inline control-label">
-                <input type="radio" id="genderFemale" name="gender" value="female" /> Female
-            </label>
-            <span class="help-block hidden"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="age" class="col-lg-2 control-label">Age</label>
-        <div class="col-lg-10">
-            <input type="number" class="form-control" id="age" name="age" />
-            <span class="help-block hidden"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-lg-offset-2 col-lg-10">
-            <div class="checkbox">
-                <label class="control-label">
-                    <input type="checkbox" value="true" id="terms" name="terms" />I agree all your <a href="#">Terms of Services</a>
-
-                </label>
-                <span class="help-block hidden"></span>
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-lg-offset-2 col-lg-10">
-            <button type="button" id="signUpButton" class="btn btn-success">Sign Up</button>
-        </div>
-    </div>
-</form>
