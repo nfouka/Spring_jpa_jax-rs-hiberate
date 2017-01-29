@@ -3,12 +3,12 @@ angulars:
   css:
     base:
         css/style.css: {}
+        
   js:
-    'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js':  {type: external}
-    'http://d3js.org/d3.v3.min.js':  {type: external}
-    'http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.min.js':  {type: external}
-    'http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.min.js':  {type: external}
-    'http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css':  {type: external}
+    'http://code.angularjs.org/1.4.8/angular.js':  {type: external}
+    'http://code.angularjs.org/1.4.8/angular-resource.js':  {type: external}
+    'http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js':  {type: external}
+
     
     js/sample1.js: {}
     js/sample2.js: {}
@@ -20,9 +20,3 @@ angulars:
   dependencies:
     - core/jquery
     - core/drupal
-    
-    
-    
-    
-        
-    

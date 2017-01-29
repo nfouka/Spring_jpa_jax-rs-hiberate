@@ -154,3 +154,8 @@ svg {
   .nadir {
       color: red ; 
   }
+  
+  
+  .icon-search {
+    margin-left:-25px;
+}
