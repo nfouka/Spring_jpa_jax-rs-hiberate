@@ -5,7 +5,7 @@ angularjs:
     'https://d3js.org/d3-scale-chromatic.v1.min.js':  {type: external}
     'https://d3js.org/topojson.v2.min.js':  {type: external}
     'http://underscorejs.org/underscore.js':  {type: external}
-   
+    'http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js':  {type: external}
 drupal_ng:
   js:
     js/drupal_ng.js: {}

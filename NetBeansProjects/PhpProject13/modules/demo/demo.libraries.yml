@@ -11,7 +11,7 @@ js_example.accordion:
 mutliStep_js:
   # Add css file.
   css:
-    component:
+    base:
       css/jsweights.css: {}
   # Add js files.
   js:

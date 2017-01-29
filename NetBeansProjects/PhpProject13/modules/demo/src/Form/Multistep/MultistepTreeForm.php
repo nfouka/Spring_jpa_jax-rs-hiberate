@@ -26,22 +26,37 @@ class MultistepTreeForm extends MultistepFormBase {
 
     $form = parent::buildForm($form, $form_state);
     
-        $form['setup_png'] = array(
-           '#markup' => $this->t('<img src="http://localhost/3.png"/>')) ; 
+           $form['setup_png'] = array(
+           '#markup' => $this->t('<ol class="wizard-progress clearfix">
+                        <li class="active-step">
+                            <span class="step-name">
+                                Identités
+                            </span>
+                            <span class="visuallyhidden">Step </span><span class="step-num">1</span>
+                        </li>
+                        <li class="active-step">
+                            <span class="step-name">Adress</span>
+                            <span class="visuallyhidden">Step </span><span class="step-num">2</span>
+                        </li>
+                        <li class="active-step">
+                            <span class="step-name">Carte Bancaire</span>
+                            <span class="visuallyhidden">Step </span><span class="step-num">3</span>
+                        </li>
+                    </ol><br/><br/><br/><br/><br/>')) ; 
     
-    
-        $form['some_text'] = array(
-           '#markup' => $this->t('<div class="progress" data-drupal-progress>
-                    <div class="progress__label">SETUP 3/%x</div>
-                    <div class="progress__track" style="width: 100% ; height : 40px ; ">
-                    <div class="progress__bar" style="width: 100% ; height : 40px ; "></div></div>
-                    <div class="progress__percentage" style="color:red ; font-size:20px;">100%</div>
-                    <div class="progress__description" style="color:red ; ">Setup 3 loading ... </div>
-                    </div><br/>
-            ', array(
-                    '%x' => 3
-            ))
-                        );
+//    
+//        $form['some_text'] = array(
+//           '#markup' => $this->t('<div class="progress" data-drupal-progress>
+//                    <div class="progress__label">SETUP 3/%x</div>
+//                    <div class="progress__track" style="width: 100% ; height : 40px ; ">
+//                    <div class="progress__bar" style="width: 100% ; height : 40px ; "></div></div>
+//                    <div class="progress__percentage" style="color:red ; font-size:20px;">100%</div>
+//                    <div class="progress__description" style="color:red ; ">Setup 3 loading ... </div>
+//                    </div><br/>
+//            ', array(
+//                    '%x' => 3
+//            ))
+//                        );
         
     $form['setup_png_logo'] = array(
            '#markup' => $this->t('<img style="width:60%;height:60%;" src="http://localhost/paiement.png"/>')) ; 

@@ -23,6 +23,7 @@ abstract class MultistepFormBase extends FormBase {
     }
 
     $form = array();
+    $form['#attached']['library'][] = 'demo/mutliStep_js';
     return $form;
   }
 

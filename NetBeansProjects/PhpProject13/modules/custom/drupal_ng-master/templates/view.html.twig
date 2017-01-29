@@ -165,7 +165,54 @@
 
 
       
+
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+<div ng-controller="mainController" id='popup'>
+    <script type="text/ng-template" id="myModalContent.html">
+        <!-- template for modal -->
+            <div class="modal-header">
+                <h3 class="modal-title">Choose your products!</h3>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="checkbox" ng-repeat="item in products">
+                        <label> 
+                            <input type="checkbox" ng-click="chkChange(item)" ng-checked="selected.indexOf(item) !== -1"/>
+                            {%verbatim%}{{item}}{%endverbatim%}
+                        </label>
+                    </div>    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" ng-click="ok()">OK</button>
+                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+            </div>
+        </script>
+    
+    <table class="table">
+        <tr>
+            <th>User name</th>
+            <th>products selected</th>
+        </tr>
+        <tr ng-repeat="user in userData">
+            <td>{%verbatim%}{{user.name}}{%endverbatim%}</td>
+            <td><button ng-click="changeProducts(user)">{%verbatim%}{{( user.selectedProducts | array ) || 'nothing selected!' }}{%endverbatim%}</button></td>
+        </tr> 
+    </table>
+</div>
       
       
       

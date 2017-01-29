@@ -28,25 +28,40 @@ class MultistepOneForm extends MultistepFormBase {
     
     
        $form['setup_png'] = array(
-           '#markup' => $this->t('<img src="http://localhost/1.png"/>')) ; 
+           '#markup' => $this->t('<ol class="wizard-progress clearfix">
+                        <li class="active-step">
+                            <span class="step-name">
+                                Identités
+                            </span>
+                            <span class="visuallyhidden">Step </span><span class="step-num">1</span>
+                        </li>
+                        <li >
+                            <span class="step-name">Adress</span>
+                            <span class="visuallyhidden">Step </span><span class="step-num">2</span>
+                        </li>
+                        <li>
+                            <span class="step-name">Carte Bancaire</span>
+                            <span class="visuallyhidden">Step </span><span class="step-num">3</span>
+                        </li>
+                    </ol><br/><br/><br/><br/><br/>')) ; 
            
            
        $form['setup_form'] = array(
            '#markup' => $this->t('<h2>Identidé(s) Client </h2>')) ; 
        
                        
-        $form['some_text'] = array(
-           '#markup' => $this->t('<div class="progress" data-drupal-progress>
-                    <div class="progress__label">SETUP 1/%x</div>
-                    <div class="progress__track" style="width: 100% ; height : 40px ; ">
-                    <div class="progress__bar" style="width: 33% ; height : 40px ; "></div></div>
-                    <div class="progress__percentage" style="color:red ;">30%</div>
-                    <div class="progress__description" style="color:red ; ">Setup 2 loading ... </div>
-                    </div>  <br/>
-            ', array(
-                    '%x' => 1
-            ))
-                        );
+//        $form['some_text'] = array(
+//           '#markup' => $this->t('<div class="progress" data-drupal-progress>
+//                    <div class="progress__label">SETUP 1/%x</div>
+//                    <div class="progress__track" style="width: 100% ; height : 40px ; ">
+//                    <div class="progress__bar" style="width: 33% ; height : 40px ; "></div></div>
+//                    <div class="progress__percentage" style="color:red ;">30%</div>
+//                    <div class="progress__description" style="color:red ; ">Setup 2 loading ... </div>
+//                    </div>  <br/>
+//            ', array(
+//                    '%x' => 1
+//            ))
+//                        );
 
         
         
@@ -94,6 +109,9 @@ class MultistepOneForm extends MultistepFormBase {
       '#button_type' => 'primary',
       '#weight' => 10,
     );
+    
+    
+    
     
     
     return $form;

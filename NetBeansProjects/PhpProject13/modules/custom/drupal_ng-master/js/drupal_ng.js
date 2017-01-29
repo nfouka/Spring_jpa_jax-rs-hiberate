@@ -512,6 +512,119 @@ function getDummyData() {
 }
  
  
+ 
+ 
+ var app = angular.module('popup', ['ui.bootstrap']);
+
+app.controller('mainController', function($scope, $modal, $log) {
+    $scope.products = ['coffee', 'beer', 'wine', 'tea', 'milk'];
+
+    // userData will be later from server with $http.get('/phpscript').success(...)
+    // just dummy userData here because no backend available    
+    $scope.userData = [
+        {
+            name: 'John Doe',
+            selectedProducts: [
+                'coffee',
+                'beer',
+                'wine']
+        },
+        {
+            name: 'Jane Doe',
+            selectedProducts: [
+                'coffee',
+                'tea']
+        }
+    ];
+    
+    $scope.changeProducts = function(userData) {
+        //$scope.items = ['item1', 'item2', 'item3'];
+
+        var modalInstance = $modal.open({
+            templateUrl: 'myModalContent.html',
+            controller: 'ModalInstanceCtrl',
+            
+            //size: size,
+            resolve: {
+                user: function() {
+                    return userData;
+                },
+                selectedProducts: function() {
+                    return userData.selectedProducts;
+                },
+                products: function () {
+                    //console.log($scope.selectedProducts);
+                    return $scope.products; // get all available products
+                }
+            }
+        });
+        
+        modalInstance.result.then(function (selectedItems) {
+            //products = selectedItems;
+        }, function () {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
+    };
+});
+
+app.controller('ModalInstanceCtrl', function ($scope, $http, $modalInstance, products, selectedProducts, user) {
+
+  //console.log('user', user);
+  $scope.products = products;
+    
+  $scope.selected = selectedProducts;
+
+  $scope.chkChange = function(item) {
+      console.log(item);
+      var index  = $scope.selected.indexOf(item);
+      if (index > -1) {
+          $scope.selected.splice(index, 1);
+      }
+      else {
+          // not selected --> we have to add it
+          $scope.selected.push(item);
+      }
+      console.log($scope.selected);
+  };
+  //console.log(selectedProducts);
+  $scope.ok = function () {
+      // prepare everything for sending to sever
+      // --> probably check here if the data have changed or not (not implemented yet)
+      
+      console.log('new selection', $scope.selected);
+      var data = $.param({
+            json: JSON.stringify({
+                user: user.name,
+                products: $scope.selected
+            })
+        });
+      
+      $http.post('/echo/json/', data)
+          .success(function(data, status) {
+              console.log('posted the following data:', data);
+          });
+      
+      $modalInstance.close();//); $scope.selected.item);
+  };
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+});
+
+//custom filter to display the selected products.
+app.filter('array', function() {
+    return function(input) {
+        //console.log(input);
+        return input.join(', ');
+    };
+});
+
+  angular.element(document).ready(function() {
+  angular.bootstrap(document.getElementById("popup"),['popup']);
+});
+ 
+ 
 
   angular.element(document).ready(function() {
   angular.bootstrap(document.getElementById("myApp999"),['myApp999']);
