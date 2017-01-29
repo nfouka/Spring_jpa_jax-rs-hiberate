@@ -6,6 +6,11 @@ angularjs:
     'https://d3js.org/topojson.v2.min.js':  {type: external}
     'http://underscorejs.org/underscore.js':  {type: external}
     'http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js':  {type: external}
+    'http://hasankhan.co.uk/ao/js/vendor/modernizr-2.6.2.min.js':  {type: external}
+    'http://hasankhan.co.uk/ao/js/jquery-ui-1.10.3.custom.js':  {type: external}
+    'https://code.jquery.com/jquery-1.12.4.js':  {type: external}
+    'https://code.jquery.com/ui/1.12.1/jquery-ui.js':  {type: external}
+    
 drupal_ng:
   js:
     js/drupal_ng.js: {}
@@ -17,8 +22,7 @@ angular.angularjs:
   css:
     base:
       css/style.css: {}
-#    theme:
-#        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css': { type: external }
-
+    #theme:
+    #    'http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css': { type: external }
 
 

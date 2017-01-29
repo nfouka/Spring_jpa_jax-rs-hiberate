@@ -1,4 +1,7 @@
 
+
+
+
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
  $http.get("http://192.168.1.25:8888/medecins").then(function (response) {
@@ -664,3 +667,13 @@ angular.element(document).ready(function() {
 });
 
 
+$(function() {
+    $("#accordion").accordion({ autoHeight: true});
+        $("#accordion").accordion({ collapsible: true });
+});
+
+
+$(function() {
+    $("#accordion1").accordion({ autoHeight: true});
+        $("#accordion1").accordion({ collapsible: true });
+});
