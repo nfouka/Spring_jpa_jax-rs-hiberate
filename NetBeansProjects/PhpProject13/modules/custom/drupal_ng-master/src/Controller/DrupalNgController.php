@@ -1,6 +1,7 @@
 <?php
-namespace Drupal\drupal_ng\Controller;
 
+
+namespace Drupal\drupal_ng\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 class DrupalNgController extends ControllerBase {

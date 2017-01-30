@@ -159,3 +159,36 @@ svg {
   .icon-search {
     margin-left:-25px;
 }
+
+.count {
+    font-size: 20px ; 
+    display: inline-block ; 
+}
+
+
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: #333;
+  background: #419be0;
+}
+
+.slick-slide {
+  text-align: center;
+  color: #419be0;
+  background: white;
+}

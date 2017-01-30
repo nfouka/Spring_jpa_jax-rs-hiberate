@@ -1,6 +1,4 @@
-
-
-<div ng-app="myApp2" ng-controller="customersCtrl2" id="s3_container2">
+{#<div ng-app="myApp2" ng-controller="customersCtrl2" id="s3_container2">
     <pre>Sorting predicate = {%verbatim%}{{predicate}}{%endverbatim%}; reverse = {%verbatim%}{{reverse}}{%endverbatim%}</pre>
     <hr/>
     [ <a href="" ng-click="predicate=''">unsorted</a> ]
@@ -19,12 +17,6 @@
       <tr>
     </table>
   </div>
-
-     
-
-
-
-
 
 <div ng-controller="appController" ng-app="app" id="s3_container1981">
 
@@ -45,10 +37,7 @@
             </tr>
         </tbody>
     </table>
-
 </div>
-
-
 
 <div ng-controller="PaginationController" ng-app="paginationModule" id="s3_container9">
 <h3>List students</h3>  
@@ -92,11 +81,7 @@
        </pagination>  
      </div>  
 </div>
-
-           
-
-           
-          
+    
 
 <div class="container" ng-app="sortApp" ng-controller="mainController" id="mainControllerSorter">
   
@@ -116,7 +101,6 @@
   </form>
   
   <table class="table table-bordered table-striped">
-    
     <thead>
       <tr>
         <td>
@@ -162,11 +146,79 @@
   </p>
   
 </div>
-
-
-
       
-      
+<div id="accordion"> 
+<h3><a href="#">Section 1</a></h3>
+    <div>
+        <p>Section 1 Content
+            <br />This is the jQuery Accordion Widget.
+            <br />See Section 3 to find out why this is so tall.
+            <br />Or we could have set the autoheight option to false $("#accordion").accordion({ autoHeight: false});
+            <br />
+            <br />Documentation: <a href="http://docs.jquery.com/UI/Accordion#option-autoHeight">see the autoheight parameter</a>
+
+        </p>
+    </div>
+    	<h3><a href="#">Section 2</a></h3>
+
+    <div>
+        <p>Section 2 Content
+            <br />Use this when you have multiple sections and want only one visible at a time.
+            <br />
+            <br />In this example you can close all the sections because the collapsible option is set to true
+            <br />
+            <br />$("#accordion").accordion({ collapsible: true });
+            <br />
+            <br />Try it. Click the bar above that says "Section 2"</p>
+    </div>
+    	<h3><a href="#">Section 3</a></h3>
+
+    <div>
+        <p>Section 3 Content
+            <br />Use caution - and notice that if you have really long content it may be difficult to see the accordion section links. And the longest section sets the height for all of the sections.
+            <br /><a href="http://huwshimi.com/comic/"><img src="http://dotnet.tech.ubc.ca/CourseWiki/images/a/a5/You_must_be_this_tall.png" style="border:none;width:300px"/></a>
+
+        </p>
+    </div>
+    	<h3><a href="#">Section 4</a></h3>
+
+    <div>
+        <p>Section 4 Content
+            <br />Thanks for reading all four sections.</p>
+    </div>
+</div>#}
+
+
+{#
+
+
+<img src='https://yudyx86.files.wordpress.com/2015/06/loading.gif?w=240' id='loading' />
+
+<div ng-app="app" ng-controller="HttpGetController">
+    <p>First Name: <input type="text" name="firstName" ng-model="firstName" required /></p>
+    <p>First Name: <input type="text" name="lastName" ng-model="lastName" required /></p>
+    <button ng-click="SendData()">Submit</button>
+    <hr />
+    {%verbatim%}{{ PostDataResponse }}{%endverbatim%}
+</div>
+
+
+#}
+
+<h1>List des medecin par villes </h1>
+<div ng-app="myApp" ng-controller="customersCtrl" id='myApp'>
+<table>
+  <tr ng-repeat="x in names">
+    <td>{%verbatim%}{{ x.Code_commune_INSEE }}{%endverbatim%}</td>
+    <td>{%verbatim%}{{ x.Code_postal }}{%endverbatim%}</td>
+    <td>{%verbatim%}{{ x.name }}{%endverbatim%}</td>
+    <td>{%verbatim%}{{ x.Libelle_acheminement }}{%endverbatim%}</td>
+    <td>{%verbatim%}{{ x.ville_ref }}{%endverbatim%}</td>
+  </tr>
+</table>
+</div>
+
+{#
 <div id="accordion">
     
 <h3><a href="#">Section 1</a></h3>
@@ -209,3 +261,15 @@
             <br />Thanks for reading all four sections.</p>
     </div>
 </div>
+
+
+
+  <div class='container'>
+  <div class='single-item'>
+    <div><h3>carosel 1</h3></div>
+    <div><h3><img src='https://wildcatconservation.org/wp-content/uploads/2013/03/2016-sand-cat-group.jpg' /></h3></div>
+    <div><h3><img src='https://i.ytimg.com/vi/QtMmgzGYih0/maxresdefault.jpg' /></h3></div>
+    <div><h3><img src='https://wildcatconservation.org/wp-content/uploads/2013/03/2016-sand-cat-group.jpg' /></h3></div>
+    <div><h3><img src='https://wildcatconservation.org/wp-content/uploads/2013/03/2016-sand-cat-group.jpg' /></h3></div>
+  </div>
+</div>#}

@@ -5,3 +5,11 @@ drupal_ng.view:
     _controller: '\Drupal\drupal_ng\Controller\DrupalNgController::viewDrupalNg'
   requirements:
     _permission: 'access content'
+
+drupal_ng.default_controller_hello:
+  path: '/ng'
+  defaults:
+    _controller: '\Drupal\drupal_ng\Controller\DefaultController::hello'
+    _title: 'hello'
+  requirements:
+    _permission: 'access content'
