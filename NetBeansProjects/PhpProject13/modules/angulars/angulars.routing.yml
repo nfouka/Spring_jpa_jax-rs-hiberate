@@ -1,7 +1,0 @@
-angulars:
-  path: '/angulars'
-  defaults:
-    _controller: '\Drupal\angulars\Controller\AngularsController::content'
-    _title: 'AngularJS With RestFull UI'
-  requirements:
-    _permission: 'access content'

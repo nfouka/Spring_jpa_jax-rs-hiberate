@@ -1,5 +1,0 @@
-services:
-  php4logger.factory:
-    class: Drupal\php4logger\Php4LoggerService
-    arguments: ['consultation']
-
